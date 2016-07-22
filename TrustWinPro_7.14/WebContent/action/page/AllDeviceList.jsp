@@ -11,30 +11,19 @@
 var change = 0;
 function allDeviceInfoCheck(){
 	var check = document.deviceInfo.check;
-	if(check.value != 'undefine'){
-		if(change == 0){
-			check.checked = true;	
-			change = 1;
-		}else{
-			check.checked = false;
-			change = 0;
+	if(change == 0){
+		for(var i = 0 ; i < check.length;i++ ){
+			check[i].checked = true;	
 		}
-	}else{
-		if(change == 0){
-			for(var i = 0 ; i < check.length;i++ ){
-				check[i].checked = true;	
-			}
-				
-			change = 1;
-		}else{
-			for(var i = 0 ; i < check.length;i++ ){
-				check[i].checked = false;
-			}
 			
-			change = 0;
+		change = 1;
+	}else{
+		for(var i = 0 ; i < check.length;i++ ){
+			check[i].checked = false;
 		}
+		
+		change = 0;
 	}
-	
 }
 
 
