@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- 스크립트 실행에 반드시 필요한 부분 -->
+<script type="text/javascript" src="prototype.js"></script>
+<script type="text/javascript" src="proto.menu.0.6.js"></script>
+
+<!-- Context menu의 디자인을 구성하는 스타일 시트 파일 -->
+<link rel="stylesheet" href="proto.menu.0.6.css" type="text/css" media="screen">
+
+<script language="javascript" type="text/javascript">
+<!--
+// Context menu의 Item을 구성하는 부분
+document.observe('dom:loaded', function(){
+	var myMenuItems = [
+	{ // 첫번째
+		name: '뒤로',
+		className: 'back', 
+		callback: function() {
+			history.back();
+		}
+	},{ // 두번째
+		name: '첫페이지',
+		className: 'home',
+		callback: function() {
+			location.href='http://shar.kr/';
+		}
+	},{ // 세번째
+		name: '새로고침',
+		className: 'refresh',
+		callback: function() {
+			location.reload(true);
+		}
+	},{ // 네번째
+		name: '앞으로',
+		className: 'forward', 
+		callback: function() {
+			history.forward();
+		}
+	},{ // 다섯째
+		separator: true // 구분선입니다.
+	}
+	]
+
+// Context menu 객체를 생성
+	new Proto.Menu({
+		// Context menu가 출력될 div의 id, 반드시 id 앞에 #을 붙여야 합니다.
+		selector: '#menu',
+		// Context menu의 디자인입니다. 스타일 시트로 꾸밀 시 .menu.ff 식으로 접근하시면 됩니다.
+		className: 'menu desktop',
+		menuItems: myMenuItems // 위에서 구성해 둔 Item을 추가합니다.
+	})
+})
+//-->
+</script>
+</head>
+<body>
+
+<div id='menu' style='background-color:#CCC; width:5000px; height:5000px;'>
+
+</div>
+
+</body>
+</html>
