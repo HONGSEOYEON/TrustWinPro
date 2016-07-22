@@ -15,7 +15,7 @@
 			location.replace("Login.jsp");
 		</script>
 <%
-	}  System.out.println(서연너어어엉어어);
+	}
 %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
