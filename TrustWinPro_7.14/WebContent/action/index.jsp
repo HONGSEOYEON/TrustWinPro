@@ -2,7 +2,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<!--hello  -->
 <%
 	String id = (String)session.getAttribute("id");
 	String nation = (String)session.getAttribute("nation");
@@ -50,7 +49,7 @@ $(".Loading").css("display","none");
 </body>
 </html>
 
-<%
+<% 
 	if(userClass != null && !userClass.equals("128")){
 %>
 		<script>
